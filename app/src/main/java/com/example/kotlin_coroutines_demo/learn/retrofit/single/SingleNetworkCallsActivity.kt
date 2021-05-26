@@ -59,7 +59,7 @@ class SingleNetworkCallsActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(
             this, ViewModelFactory(
                 ApiHelperImpl(RetrofitBuilder.apiService),
-                DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
+                DatabaseHelperImpl(DatabaseBuilder.getInstance(this))
             )
         ).get(SingleNetworkCallsViewModel::class.java)
     }

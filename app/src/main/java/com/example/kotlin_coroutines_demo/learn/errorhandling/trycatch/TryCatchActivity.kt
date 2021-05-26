@@ -59,7 +59,7 @@ class TryCatchActivity : AppCompatActivity() {
             this,
             ViewModelFactory(
                 ApiHelperImpl(RetrofitBuilder.apiService),
-                DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
+                DatabaseHelperImpl(DatabaseBuilder.getInstance(this))
             )
         ).get(TryCatchViewModel::class.java)
     }
